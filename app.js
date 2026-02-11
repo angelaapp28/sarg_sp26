@@ -2,121 +2,133 @@ let TEAMS_DATA = {};
 let METADATA = null;
 // Default settings
 const DEFAULT_SETTINGS = {
-// First pitch thresholds
-aggressiveFirstPitchThreshold: 50,
-// Steal threat thresholds
-stealHighAttemptsThreshold: 3,
-stealModerateAttemptsThreshold: 1,
-// Bunt threat thresholds
-buntHighThreshold: 3,
-buntModerateThreshold: 1,
-// Spray chart thresholds
-sprayPullThreshold: 60,
-sprayOppoThreshold: 40,
-sprayMinAtBats: 5,
-sprayAngleThreshold: 15,
-// Zone analysis thresholds
-vulnerableZoneMinSwings: 3,
-vulnerableZoneThreshold: 45,
-hotZoneMinHardHits: 2,
-hotZoneHardHitThreshold: 40,
-// Contact quality thresholds
-hardContactThreshold: 95,
-weakContactThreshold: 70,
-// Pitch display settings
-maxPitchesDisplayed: 10,
-showOnlyGoodPitches: false,
-showOnlyBadPitches: false,
-pitchCircleSize: 32
+  // First pitch thresholds
+  aggressiveFirstPitchThreshold: 50,
+  // Steal threat thresholds
+  stealHighAttemptsThreshold: 3,
+  stealModerateAttemptsThreshold: 1,
+  // Bunt threat thresholds
+  buntHighThreshold: 3,
+  buntModerateThreshold: 1,
+  // Spray chart thresholds
+  sprayPullThreshold: 60,
+  sprayOppoThreshold: 40,
+  sprayMinAtBats: 5,
+  sprayAngleThreshold: 15,
+  // Zone analysis thresholds
+  vulnerableZoneMinSwings: 3,
+  vulnerableZoneThreshold: 45,
+  hotZoneMinHardHits: 2,
+  hotZoneHardHitThreshold: 40,
+  // Contact quality thresholds
+  hardContactThreshold: 95,
+  weakContactThreshold: 70,
+  // Pitch display settings
+  maxPitchesDisplayed: 10,
+  showOnlyGoodPitches: false,
+  showOnlyBadPitches: false,
+  pitchCircleSize: 32
 };
+
 let CURRENT_SETTINGS = { ...DEFAULT_SETTINGS };
+
 function createElement(tag, props = {}, ...children) {
-const el = document.createElement(tag);
-Object.entries(props).forEach(([key, value]) => {
-if (key === 'className') {
-el.className = value;
-    } else if (key === 'style' && typeof value === 'object') {
-Object.assign(el.style, value);
-    } else if (key.startsWith('on') && typeof value === 'function') {
-el.addEventListener(key.substring(2).toLowerCase(), value);
+  const el = document.createElement(tag);
+  Object.entries(props).forEach(([key, value]) => {
+    if (key === 'className') {
+      el.className = value;
+    } 
+    else if (key === 'style' && typeof value === 'object') {
+      Object.assign(el.style, value);
+    } 
+    else if (key.startsWith('on') && typeof value === 'function') {
+      el.addEventListener(key.substring(2).toLowerCase(), value);
     } else {
-el.setAttribute(key, value);
+      el.setAttribute(key, value);
     }
   });
-children.flat().forEach(child => {
-if (child != null) {
-if (typeof child === 'string' || typeof child === 'number') {
-el.appendChild(document.createTextNode(String(child)));
-      } else if (child instanceof Node) {
-el.appendChild(child);
+
+  children.flat().forEach(child => {
+    if (child != null) {
+      if (typeof child === 'string' || typeof child === 'number') {
+        el.appendChild(document.createTextNode(String(child)));
+      } 
+      else if (child instanceof Node) {
+        el.appendChild(child);
       }
     }
   });
-return el;
+  return el;
 }
+
 function createPitchZone(zones, handedness) {
-const safeZones = Array.isArray(zones) ? zones : [];
-// Apply pitch filtering based on settings
-let filteredZones = safeZones;
-if (CURRENT_SETTINGS.showOnlyGoodPitches) {
-filteredZones = filteredZones.filter(z => z.good === true);
-  } else if (CURRENT_SETTINGS.showOnlyBadPitches) {
-filteredZones = filteredZones.filter(z => z.good === false);
+  const safeZones = Array.isArray(zones) ? zones : [];
+
+  // Apply pitch filtering based on settings
+  let filteredZones = safeZones;
+  if (CURRENT_SETTINGS.showOnlyGoodPitches) {
+    filteredZones = filteredZones.filter(z => z.good === true);
+  } 
+  else if (CURRENT_SETTINGS.showOnlyBadPitches) {
+    filteredZones = filteredZones.filter(z => z.good === false);
   }
-// Apply max pitches limit
-let displayZones = filteredZones;
-const maxPitches = CURRENT_SETTINGS.maxPitchesDisplayed;
-if (filteredZones.length > maxPitches) {
-const step = filteredZones.length / maxPitches;
-displayZones = [];
-for (let i = 0; i < maxPitches; i++) {
-const index = Math.floor(i * step);
-displayZones.push(filteredZones[index]);
+
+  // Apply max pitches limit
+  let displayZones = filteredZones;
+  const maxPitches = CURRENT_SETTINGS.maxPitchesDisplayed;
+  if (filteredZones.length > maxPitches) {
+    const step = filteredZones.length / maxPitches;
+    displayZones = [];
+    for (let i = 0; i < maxPitches; i++) {
+      const index = Math.floor(i * step);
+      displayZones.push(filteredZones[index]);
     }
   }
-const pitchElements = displayZones.map(zone => {
-  const [x, y] = zone.position || [50, 50];
-  const pitchType = zone.pitch || 'F';
-  const isGood = zone.good === true;
-  const colorClass = isGood ? 'pitch-circle--good' : 'pitch-circle--bad';
-  return createElement('div', {
-    className: `pitch-circle ${colorClass}`,
-    style: { left: `${x}%`, top: `${y}%` },
-    title: `${pitchType} — ${isGood ? 'Attack here' : 'Avoid this location'}`
-  }, pitchType);
-});
-const isLeftHanded = handedness === 'LHB';
-const batterClass = isLeftHanded ? 'batter-graphic-left-handed' : 'batter-graphic-right-handed';
-const svgPath = isLeftHanded ? './lhb.svg' : './rhb.svg';
-const svgImg = createElement('img', {
-src: svgPath,
-alt: isLeftHanded ? 'Left-Handed Batter' : 'Right-Handed Batter',
-style: { width: '100%', height: '100%', 'object-fit': 'contain' }
+
+  const pitchElements = displayZones.map(zone => {
+    const [x, y] = zone.position || [50, 50];
+    const pitchType = zone.pitch || 'F';
+    const isGood = zone.good === true;
+    const colorClass = isGood ? 'pitch-circle--good' : 'pitch-circle--bad';
+    return createElement('div', {
+                            className: `pitch-circle ${colorClass}`,
+                            style: { left: `${x}%`, top: `${y}%` },
+                            title: `${pitchType} — ${isGood ? 'Attack here' : 'Avoid this location'}`
+                          }, pitchType);
   });
-const batterGraphic = createElement('div', { 
-className: `batter-graphic ${batterClass}`,
-  title: isLeftHanded ? 'Left-Handed Batter' : 'Right-Handed Batter'
+
+  const isLeftHanded = handedness === 'LHB';
+  const batterClass = isLeftHanded ? 'batter-graphic-left-handed' : 'batter-graphic-right-handed';
+  const svgPath = isLeftHanded ? './lhb.svg' : './rhb.svg';
+  const svgImg = createElement('img', {
+    src: svgPath,
+    alt: isLeftHanded ? 'Left-Handed Batter' : 'Right-Handed Batter',
+    style: { width: '100%', height: '100%', 'object-fit': 'contain' }
+  });
+
+  const batterGraphic = createElement('div', { 
+    className: `batter-graphic ${batterClass}`,
+    title: isLeftHanded ? 'Left-Handed Batter' : 'Right-Handed Batter'
   }, svgImg);
-const pitchZone = createElement('div', { className: 'pitch-zone' }, ...pitchElements);
-pitchZone.style.setProperty('--pitch-circle-size', `${CURRENT_SETTINGS.pitchCircleSize}px`);
-return createElement('div', { className: 'pitch-zone-container' },
-batterGraphic,
-pitchZone
-  );
+
+  const pitchZone = createElement('div', { className: 'pitch-zone' }, ...pitchElements);
+  pitchZone.style.setProperty('--pitch-circle-size', `${CURRENT_SETTINGS.pitchCircleSize}px`);
+  
+  return createElement('div', { className: 'pitch-zone-container' }, batterGraphic, pitchZone);
 }
+
 function createBatterGraphic(handedness, batterName, pitchZones) {
-const isLeftHanded = handedness === 'LHB';
-const totalPitches = Array.isArray(pitchZones) ? pitchZones.length : 0;
-const handText = isLeftHanded ? 'LEFT-HANDED BATTER' : 'RIGHT-HANDED BATTER';
-return createElement('div', { className: 'batter-section' },
-createElement('div', { className: 'handedness-badge' }, handText),
-createElement('div', { className: 'batter-info' },
-createElement('div', { className: 'batter-name' }, batterName || 'Unknown'),
-createElement('div', { className: 'batter-stats' },
-`Total Pitches: ${totalPitches}`)
-    )
-  );
+  const isLeftHanded = handedness === 'LHB';
+  const totalPitches = Array.isArray(pitchZones) ? pitchZones.length : 0;
+  const handText = isLeftHanded ? 'LEFT-HANDED BATTER' : 'RIGHT-HANDED BATTER';
+  return createElement('div', { className: 'batter-section' },
+          createElement('div', { className: 'handedness-badge' }, handText),
+          createElement('div', { className: 'batter-info' },
+          createElement('div', { className: 'batter-name' }, batterName || 'Unknown'),
+          createElement('div', { className: 'batter-stats' }, `Total Pitches: ${totalPitches}`)));
 }
+
+
 function createTendencies(tendencies, stats, zoneAnalysis, powerSequence) {
   const stripPercents = (text) => {
     if (typeof text !== 'string') return text;
@@ -128,80 +140,94 @@ function createTendencies(tendencies, stats, zoneAnalysis, powerSequence) {
       .trim();
   };
   const safeStats = stats || {};
+
   const swingRate = safeStats.totalPitches > 0
     ? `${(safeStats.swings / safeStats.totalPitches * 100).toFixed(0)}%`
     : 'N/A';
-const contactRate = safeStats.swings > 0
-? `${(safeStats.contact / safeStats.swings * 100).toFixed(0)}%`
-: 'N/A';
-const whiffRate = safeStats.swings > 0
-? `${(safeStats.whiffs / safeStats.swings * 100).toFixed(0)}%`
-: 'N/A';
-const firstPitchSwingRate = safeStats.firstPitchPitches > 0
-? `${(safeStats.firstPitchSwings / safeStats.firstPitchPitches * 100).toFixed(0)}%`
-: 'N/A';
-const vulnerableZones = [];
-const hotZones = [];
-if (zoneAnalysis) {
-Object.entries(zoneAnalysis).forEach(([zone, stats]) => {
-if (stats.swings > CURRENT_SETTINGS.vulnerableZoneMinSwings) {
-const whiffPct = (stats.whiffs / stats.swings * 100);
-const weakContactPct = stats.contact > 0 ? (stats.weakContact / stats.contact * 100) : 0;
-const foulPct = (stats.fouls / stats.swings * 100);
-const combinedVulnerability = whiffPct + (weakContactPct * 0.5) + (foulPct * 0.3);
-if (combinedVulnerability > CURRENT_SETTINGS.vulnerableZoneThreshold) {
-vulnerableZones.push({ zone, score: combinedVulnerability.toFixed(0) });
+
+  const contactRate = safeStats.swings > 0
+    ? `${(safeStats.contact / safeStats.swings * 100).toFixed(0)}%`
+    : 'N/A';
+
+  const whiffRate = safeStats.swings > 0
+    ? `${(safeStats.whiffs / safeStats.swings * 100).toFixed(0)}%`
+    : 'N/A';
+  const firstPitchSwingRate = safeStats.firstPitchPitches > 0
+    ? `${(safeStats.firstPitchSwings / safeStats.firstPitchPitches * 100).toFixed(0)}%`
+    : 'N/A';
+  
+  const vulnerableZones = [];
+  const hotZones = [];
+
+  if (zoneAnalysis) {
+    Object.entries(zoneAnalysis).forEach(([zone, stats]) => {
+      if (stats.swings > CURRENT_SETTINGS.vulnerableZoneMinSwings) {
+        const whiffPct = (stats.whiffs / stats.swings * 100);
+        const weakContactPct = stats.contact > 0 ? (stats.weakContact / stats.contact * 100) : 0;
+        const foulPct = (stats.fouls / stats.swings * 100);
+        const combinedVulnerability = whiffPct + (weakContactPct * 0.5) + (foulPct * 0.3);
+        
+        if (combinedVulnerability > CURRENT_SETTINGS.vulnerableZoneThreshold) {
+          vulnerableZones.push({ zone, score: combinedVulnerability.toFixed(0) });
         }
-const hardHitPct = stats.contact > 0 ? (stats.hardHits / stats.contact * 100) : 0;
-if (hardHitPct > CURRENT_SETTINGS.hotZoneHardHitThreshold && stats.hardHits >= CURRENT_SETTINGS.hotZoneMinHardHits) {
-hotZones.push({ zone, hardHitPct: hardHitPct.toFixed(0) });
+
+        const hardHitPct = stats.contact > 0 ? (stats.hardHits / stats.contact * 100) : 0;
+        if (hardHitPct > CURRENT_SETTINGS.hotZoneHardHitThreshold && 
+            stats.hardHits >= CURRENT_SETTINGS.hotZoneMinHardHits) {
+            hotZones.push({ zone, hardHitPct: hardHitPct.toFixed(0) });
         }
       }
     });
   }
-vulnerableZones.sort((a, b) => b.score - a.score);
+
+  vulnerableZones.sort((a, b) => b.score - a.score);
   hotZones.sort((a, b) => b.hardHitPct - a.hardHitPct);
   let firstPitchText = tendencies?.firstStrike || `Swings ${firstPitchSwingRate} on first pitch`;
   let sprayText = tendencies?.spray || 'All fields';
   firstPitchText = stripPercents(firstPitchText);
   sprayText = stripPercents(sprayText);
   const cleanedPowerSequence = stripPercents(powerSequence || 'Insufficient data');
+
   return createElement('div', { className: 'info-section' },
-    createElement('div', { className: 'power-sequence stats-box' },
-      createElement('h4', {}, 'First-Pitch Approach'),
-      createElement('div', { className: 'power-sequence-text' }, firstPitchText)
-    ),
-    vulnerableZones.length > 0 ? createElement('div', { className: 'power-sequence vulnerable-zone' },
-      createElement('h4', {}, 'Vulnerable Zones'),
-      createElement('div', { className: 'power-sequence-text' }, 
-        vulnerableZones.slice(0, 2).map(z => z.zone).join(', ') || 'Calculating...')
-    ) : null,
-    hotZones.length > 0 ? createElement('div', { className: 'power-sequence hot-zone' },
-      createElement('h4', {}, 'Hot Zones (Avoid)'),
-      createElement('div', { className: 'power-sequence-text' }, 
-        hotZones.slice(0, 2).map(z => z.zone).join(', ') || 'None identified')
-    ) : null,
-    createElement('div', { className: 'power-sequence' },
-      createElement('h4', {}, 'Out Sequence'),
-      createElement('div', { className: 'power-sequence-text' }, cleanedPowerSequence)
-    ),
-createElement('div', { className: 'power-sequence threat-box' },
-createElement('h4', {}, 'Threats & Tendencies'),
-createElement('div', { className: 'threat-item' },
-createElement('span', { className: 'threat-label' }, 'Steal:'),
-createElement('span', { className: 'threat-value' }, tendencies?.stealThreat || 'Low')
-      ),
-createElement('div', { className: 'threat-item' },
-createElement('span', { className: 'threat-label' }, 'Bunt:'),
-createElement('span', { className: 'threat-value' }, tendencies?.buntThreat || 'Low')
-      ),
-      createElement('div', { className: 'threat-item' },
-        createElement('span', { className: 'threat-label' }, 'Spray:'),
-        createElement('span', { className: 'threat-value' }, sprayText)
-      )
-    )
+          createElement('div', { className: 'power-sequence stats-box' },
+            createElement('h4', {}, 'First-Pitch Approach'),
+            createElement('div', { className: 'power-sequence-text' }, firstPitchText)
+          ),
+
+          vulnerableZones.length > 0 ? createElement('div', { className: 'power-sequence vulnerable-zone' },
+            createElement('h4', {}, 'Vulnerable Zones'),
+            createElement('div', { className: 'power-sequence-text' }, 
+              vulnerableZones.slice(0, 2).map(z => z.zone).join(', ') || 'Calculating...')
+          ) : null,
+
+          hotZones.length > 0 ? createElement('div', { className: 'power-sequence hot-zone' },
+            createElement('h4', {}, 'Hot Zones (Avoid)'),
+            createElement('div', { className: 'power-sequence-text' }, 
+              hotZones.slice(0, 2).map(z => z.zone).join(', ') || 'None identified')
+          ) : null,
+
+          createElement('div', { className: 'power-sequence' },
+            createElement('h4', {}, 'Out Sequence'),
+            createElement('div', { className: 'power-sequence-text' }, cleanedPowerSequence)
+          ),
+          createElement('div', { className: 'power-sequence threat-box' },
+            createElement('h4', {}, 'Threats & Tendencies'),
+            createElement('div', { className: 'threat-item' },
+              createElement('span', { className: 'threat-label' }, 'Steal:'),
+              createElement('span', { className: 'threat-value' }, tendencies?.stealThreat || 'Low')
+            ),
+            createElement('div', { className: 'threat-item' },
+              createElement('span', { className: 'threat-label' }, 'Bunt:'),
+              createElement('span', { className: 'threat-value' }, tendencies?.buntThreat || 'Low')
+            ),
+            createElement('div', { className: 'threat-item' },
+              createElement('span', { className: 'threat-label' }, 'Spray:'),
+              createElement('span', { className: 'threat-value' }, sprayText)
+            )
+          )
   );
 }
+
 class FlashcardApp {
   constructor(container) {
     this.container = container;
@@ -213,6 +239,7 @@ class FlashcardApp {
     this.ensurePrintContainers();
     this.render();
   }
+
   ensurePrintContainers() {
     if (!document.getElementById('print-container')) {
       const single = document.createElement('div');
@@ -225,10 +252,12 @@ class FlashcardApp {
       document.body.appendChild(lineup);
     }
   }
+
   getPrintContainer(id) {
     this.ensurePrintContainers();
     return document.getElementById(id);
   }
+
   buildPrintPage(batter, teamName, orderIndex) {
     const metaBits = [];
     if (teamName) metaBits.push(teamName);
@@ -252,6 +281,7 @@ class FlashcardApp {
     );
     return createElement('div', { className: 'print-page' }, widget);
   }
+
   printCurrentCard() {
     const lineup = TEAMS_DATA[this.selectedTeam];
     if (!lineup || lineup.length === 0) return;
@@ -261,6 +291,7 @@ class FlashcardApp {
     container.appendChild(this.buildPrintPage(batter, this.selectedTeam, this.selectedBatterIndex));
     setTimeout(() => window.print(), 30);
   }
+
   printLineup() {
     const lineup = TEAMS_DATA[this.selectedTeam];
     if (!lineup || lineup.length === 0) return;
@@ -271,41 +302,43 @@ class FlashcardApp {
     });
     setTimeout(() => window.print(), 30);
   }
+
   toggleInfo() {
     this.showInfoPanel = !this.showInfoPanel;
     this.render();
   }
+
   toggleSettings() {
-this.showSettingsPanel = !this.showSettingsPanel;
-this.render();
+    this.showSettingsPanel = !this.showSettingsPanel;
+    this.render();
   }
-updateSetting(key, value) {
-CURRENT_SETTINGS[key] = value;
-this.render();
+  updateSetting(key, value) {
+    CURRENT_SETTINGS[key] = value;
+    this.render();
   }
-resetSettings() {
-CURRENT_SETTINGS = { ...DEFAULT_SETTINGS };
-this.render();
+  resetSettings() {
+    CURRENT_SETTINGS = { ...DEFAULT_SETTINGS };
+    this.render();
   }
-async loadDataRange(startDate, endDate) {
-try {
-this.currentScreen = 'loading';
-this.loadingMessage = `Loading data from ${startDate} to ${endDate}...`;
-this.render();
-const response = await fetch(
-`http://localhost:3000/api/teams/range?startDate=${startDate}&endDate=${endDate}`
-      );
-if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
-const data = await response.json();
-TEAMS_DATA = data.teamsData;
-METADATA = data.metadata;
-this.currentScreen = 'teamSelect';
-this.render();
+  async loadDataRange(startDate, endDate) {
+    try {
+      this.currentScreen = 'loading';
+      this.loadingMessage = `Loading data from ${startDate} to ${endDate}...`;
+      this.render();
+      const response = await fetch(
+      `http://localhost:3000/api/teams/range?startDate=${startDate}&endDate=${endDate}`
+            );
+      if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
+      const data = await response.json();
+      TEAMS_DATA = data.teamsData;
+      METADATA = data.metadata;
+      this.currentScreen = 'teamSelect';
+      this.render();
     } catch (err) {
-console.error(err);
-this.currentScreen = 'error';
-this.error = err.message;
-this.render();
+      console.error(err);
+      this.currentScreen = 'error';
+      this.error = err.message;
+      this.render();
     }
   }
 showDateSelect() { this.currentScreen = 'dateSelect'; this.render(); }

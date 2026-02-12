@@ -1,0 +1,998 @@
+============================================================
+BATTER: Paul Goldschmidt (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: CalledStrike%
+   Value: 33.962 | Percentile: 15.8%
+   → Takes meat pitches—throw strikes early
+2. MODERATE: ZoneContact%
+   Value: 80.177 | Percentile: 24.6%
+   → Misses hittable pitches—attack zone
+3. MODERATE: xwOBA_HighFB
+   Value: 0.246 | Percentile: 24.6%
+   → Can't handle elevation—live up
+
+RELATIVE STRENGTHS:
+   ✅ SweetSpot%: 86%
+   ✅ HardHit%: 84%
+   ✅ AvgEV: 79%
+
+============================================================
+BATTER: Jazz Chisholm Jr. (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: SweetSpot%
+   Value: 32.573 | Percentile: 8.8%
+   → Can't lift the ball—elevate fastballs
+2. MODERATE: ZoneContact%
+   Value: 79.975 | Percentile: 21.1%
+   → Misses hittable pitches—attack zone
+3. MODERATE: xwOBA_Breaking
+   Value: 0.254 | Percentile: 24.6%
+   → Can't read spin—backfoot breaking balls
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_HittersCount: 86%
+   ✅ xwOBA_Offspeed: 82%
+   ✅ CalledStrike%: 63%
+
+============================================================
+BATTER: Jonah Heim (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBA_HighFB
+   Value: 0.153 | Percentile: 3.5%
+   → Can't handle elevation—live up
+2. CRITICAL: xwOBA_Inside
+   Value: 0.27 | Percentile: 7.0%
+   → Jams easily—hard inside
+3. MAJOR: xwOBA_2Strikes
+   Value: 0.184 | Percentile: 14.0%
+   → Defensive with two strikes—waste pitches
+
+RELATIVE STRENGTHS:
+   ✅ Whiff%: 75%
+   ✅ CalledStrike%: 75%
+   ✅ xwOBA_Breaking: 68%
+
+============================================================
+BATTER: Jonah Heim (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: FirstPitchSwing%
+   Value: 45.299 | Percentile: 1.8%
+   → Predictably aggressive—first pitch breaking ball
+2. CRITICAL: xwOBA_Inside
+   Value: 0.254 | Percentile: 3.5%
+   → Jams easily—hard inside
+3. CRITICAL: xwOBA_Breaking
+   Value: 0.21 | Percentile: 5.3%
+   → Can't read spin—backfoot breaking balls
+
+RELATIVE STRENGTHS:
+   ✅ HardHit%: 93%
+   ✅ CalledStrike%: 88%
+   ✅ AvgEV: 75%
+
+============================================================
+BATTER: Fernando Tatis Jr. (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: FirstPitchSwing%
+   Value: 43.981 | Percentile: 5.3%
+   → Predictably aggressive—first pitch breaking ball
+2. MODERATE: SweetSpot%
+   Value: 34.571 | Percentile: 21.1%
+   → Can't lift the ball—elevate fastballs
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_Inside: 98%
+   ✅ xwOBA_SameSide: 95%
+   ✅ xwOBACON: 93%
+
+============================================================
+BATTER: Jake McCarthy (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: AvgEV
+   Value: 78.408 | Percentile: 1.8%
+   → Overall weak contact—attack aggressively
+2. CRITICAL: HardHit%
+   Value: 21.516 | Percentile: 3.5%
+   → Can't generate power—challenge in zone
+3. MAJOR: xwOBA_HittersCount
+   Value: 0.463 | Percentile: 10.5%
+   → Even in advantage, can't punish—don't nibble
+
+RELATIVE STRENGTHS:
+   ✅ ZoneContact%: 98%
+   ✅ xwOBA_HighFB: 82%
+   ✅ xwOBA_Breaking: 82%
+
+============================================================
+BATTER: Lourdes Gurriel Jr. (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBA_HittersCount
+   Value: 0.455 | Percentile: 8.8%
+   → Even in advantage, can't punish—don't nibble
+2. MAJOR: Chase%
+   Value: 32.92 | Percentile: 12.3%
+   → Expands zone—bury breaking balls with 2 strikes
+3. MODERATE: xwOBA_HighFB
+   Value: 0.247 | Percentile: 26.3%
+   → Can't handle elevation—live up
+
+RELATIVE STRENGTHS:
+   ✅ ZoneContact%: 77%
+   ✅ xwOBA_RISP: 77%
+   ✅ xwOBA_2Strikes: 74%
+
+============================================================
+BATTER: Lars Nootbaar (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: CalledStrike%
+   Value: 37.595 | Percentile: 1.8%
+   → Takes meat pitches—throw strikes early
+2. MAJOR: SweetSpot%
+   Value: 32.836 | Percentile: 10.5%
+   → Can't lift the ball—elevate fastballs
+
+RELATIVE STRENGTHS:
+   ✅ Chase%: 98%
+   ✅ FirstPitchSwing%: 95%
+   ✅ Whiff%: 84%
+
+============================================================
+BATTER: Matt Wallner (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: Whiff%
+   Value: 36.179 | Percentile: 0.0%
+   → Misses everything—throw chase pitches early
+2. CRITICAL: ZoneContact%
+   Value: 71.023 | Percentile: 1.8%
+   → Misses hittable pitches—attack zone
+3. CRITICAL: SweetSpot%
+   Value: 31.801 | Percentile: 7.0%
+   → Can't lift the ball—elevate fastballs
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_RISP: 96%
+   ✅ xwOBA_Offspeed: 95%
+   ✅ xwOBA_HittersCount: 95%
+
+============================================================
+BATTER: Will Benson (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: Whiff%
+   Value: 35.787 | Percentile: 1.8%
+   → Misses everything—throw chase pitches early
+2. CRITICAL: ZoneContact%
+   Value: 71.987 | Percentile: 3.5%
+   → Misses hittable pitches—attack zone
+3. CRITICAL: xwOBA_Breaking
+   Value: 0.207 | Percentile: 3.5%
+   → Can't read spin—backfoot breaking balls
+
+RELATIVE STRENGTHS:
+   ✅ Chase%: 79%
+   ✅ xwOBA_HittersCount: 68%
+   ✅ CalledStrike%: 68%
+
+============================================================
+BATTER: Nico Hoerner (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: CalledStrike%
+   Value: 36.658 | Percentile: 5.3%
+   → Takes meat pitches—throw strikes early
+2. MAJOR: HardHit%
+   Value: 24.1 | Percentile: 14.0%
+   → Can't generate power—challenge in zone
+3. MAJOR: AvgEV
+   Value: 80.874 | Percentile: 17.5%
+   → Overall weak contact—attack aggressively
+
+RELATIVE STRENGTHS:
+   ✅ ZoneContact%: 100%
+   ✅ Whiff%: 98%
+   ✅ SweetSpot%: 96%
+
+============================================================
+BATTER: Jon Singleton (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBA_SameSide
+   Value: 0.212 | Percentile: 4.8%
+   → Platoon vulnerability—same-side reliever
+2. CRITICAL: xwOBA_Breaking
+   Value: 0.223 | Percentile: 7.0%
+   → Can't read spin—backfoot breaking balls
+3. MAJOR: SweetSpot%
+   Value: 32.84 | Percentile: 12.3%
+   → Can't lift the ball—elevate fastballs
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_HittersCount: 88%
+   ✅ xwOBA_HighFB: 86%
+   ✅ FirstPitchSwing%: 84%
+
+============================================================
+BATTER: Isaac Paredes (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MODERATE: CalledStrike%
+   Value: 33.228 | Percentile: 29.8%
+   → Takes meat pitches—throw strikes early
+
+RELATIVE STRENGTHS:
+   ✅ SweetSpot%: 100%
+   ✅ FirstPitchSwing%: 88%
+   ✅ ZoneContact%: 84%
+
+============================================================
+BATTER: Victor Caratini (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBA_RISP
+   Value: 0.245 | Percentile: 8.8%
+   → Presses with runners—expand zone early
+2. MODERATE: xwOBA_Offspeed
+   Value: 0.257 | Percentile: 26.3%
+   → Fooled by timing—changeups in fastball counts
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_HighFB: 93%
+   ✅ AvgEV: 81%
+   ✅ FirstPitchSwing%: 77%
+
+============================================================
+BATTER: Victor Caratini (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: Whiff%
+   Value: 29.71 | Percentile: 10.5%
+   → Misses everything—throw chase pitches early
+2. MAJOR: HardHit%
+   Value: 24.242 | Percentile: 15.8%
+   → Can't generate power—challenge in zone
+3. MAJOR: ZoneContact%
+   Value: 79.381 | Percentile: 15.8%
+   → Misses hittable pitches—attack zone
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_Offspeed: 81%
+   ✅ xwOBA_Breaking: 77%
+   ✅ xwOBA_RISP: 74%
+
+============================================================
+BATTER: Edouard Julien (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBA_Offspeed
+   Value: 0.192 | Percentile: 5.3%
+   → Fooled by timing—changeups in fastball counts
+2. MAJOR: xwOBA_SameSide
+   Value: 0.241 | Percentile: 11.9%
+   → Platoon vulnerability—same-side reliever
+3. MAJOR: HardHit%
+   Value: 23.92 | Percentile: 12.3%
+   → Can't generate power—challenge in zone
+
+RELATIVE STRENGTHS:
+   ✅ Chase%: 96%
+   ✅ xwOBA_HighFB: 63%
+   ✅ Barrel%: 51%
+
+============================================================
+BATTER: Aaron Judge (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: Whiff%
+   Value: 28.772 | Percentile: 17.5%
+   → Misses everything—throw chase pitches early
+2. MAJOR: ZoneContact%
+   Value: 79.57 | Percentile: 19.3%
+   → Misses hittable pitches—attack zone
+3. MODERATE: SweetSpot%
+   Value: 36.27 | Percentile: 29.8%
+   → Can't lift the ball—elevate fastballs
+
+RELATIVE STRENGTHS:
+   ✅ xwOBACON: 100%
+   ✅ xwOBA_Inside: 100%
+   ✅ xwOBA_Breaking: 100%
+
+============================================================
+BATTER: Emmanuel Rivera (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MODERATE: xwOBA_HighFB
+   Value: 0.255 | Percentile: 28.1%
+   → Can't handle elevation—live up
+2. MODERATE: xwOBA_LowAway
+   Value: 0.273 | Percentile: 29.8%
+   → Can't extend—low/away sliders
+3. MODERATE: Whiff%
+   Value: 26.512 | Percentile: 29.8%
+   → Misses everything—throw chase pitches early
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_HittersCount: 93%
+   ✅ xwOBA_Breaking: 89%
+   ✅ xwOBA_SameSide: 81%
+
+============================================================
+BATTER: Korey Lee (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: FirstPitchSwing%
+   Value: 50.886 | Percentile: 0.0%
+   → Predictably aggressive—first pitch breaking ball
+2. CRITICAL: xwOBA_2Strikes
+   Value: 0.16 | Percentile: 1.8%
+   → Defensive with two strikes—waste pitches
+3. CRITICAL: Whiff%
+   Value: 33.175 | Percentile: 3.5%
+   → Misses everything—throw chase pitches early
+
+RELATIVE STRENGTHS:
+   ✅ CalledStrike%: 96%
+   ✅ xwOBA_HittersCount: 72%
+   ✅ SweetSpot%: 56%
+
+============================================================
+BATTER: Otto Lopez (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: xwOBA_HighFB
+   Value: 0.196 | Percentile: 12.3%
+   → Can't handle elevation—live up
+2. MODERATE: xwOBA_LowAway
+   Value: 0.254 | Percentile: 21.1%
+   → Can't extend—low/away sliders
+3. MODERATE: xwOBA_Offspeed
+   Value: 0.25 | Percentile: 21.1%
+   → Fooled by timing—changeups in fastball counts
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_SameSide: 83%
+   ✅ ZoneContact%: 81%
+   ✅ xwOBA_Inside: 81%
+
+============================================================
+BATTER: Ketel Marte (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: Chase%
+   Value: 35.083 | Percentile: 10.5%
+   → Expands zone—bury breaking balls with 2 strikes
+2. MAJOR: xwOBA_HighFB
+   Value: 0.209 | Percentile: 15.8%
+   → Can't handle elevation—live up
+3. MODERATE: FirstPitchSwing%
+   Value: 37.264 | Percentile: 21.1%
+   → Predictably aggressive—first pitch breaking ball
+
+RELATIVE STRENGTHS:
+   ✅ HardHit%: 100%
+   ✅ AvgEV: 100%
+   ✅ xwOBA_RISP: 100%
+
+============================================================
+BATTER: Bo Naylor (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBA_RepeatPitch
+   Value: 0.248 | Percentile: 3.5%
+   → Can't adjust—repeat pitch sequences
+2. CRITICAL: xwOBA_LowAway
+   Value: 0.214 | Percentile: 5.3%
+   → Can't extend—low/away sliders
+3. CRITICAL: xwOBA_RISP
+   Value: 0.236 | Percentile: 7.0%
+   → Presses with runners—expand zone early
+
+RELATIVE STRENGTHS:
+   ✅ FirstPitchSwing%: 63%
+   ✅ Chase%: 53%
+   ✅ Barrel%: 51%
+
+============================================================
+BATTER: Joc Pederson (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MODERATE: CalledStrike%
+   Value: 33.692 | Percentile: 21.1%
+   → Takes meat pitches—throw strikes early
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_RISP: 95%
+   ✅ FirstPitchSwing%: 91%
+   ✅ xwOBA_LowAway: 91%
+
+============================================================
+BATTER: Connor Joe (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: AvgEV
+   Value: 80.183 | Percentile: 12.3%
+   → Overall weak contact—attack aggressively
+2. MAJOR: xwOBA_LowAway
+   Value: 0.24 | Percentile: 14.0%
+   → Can't extend—low/away sliders
+3. MAJOR: xwOBA_Breaking
+   Value: 0.238 | Percentile: 14.0%
+   → Can't read spin—backfoot breaking balls
+
+RELATIVE STRENGTHS:
+   ✅ Chase%: 81%
+   ✅ FirstPitchSwing%: 53%
+   ✅ Barrel%: 51%
+
+============================================================
+BATTER: Nick Fortes (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBACON
+   Value: 0.246 | Percentile: 3.5%
+   → Weak contact even when squared—attack with velocity
+2. CRITICAL: xwOBA_LowAway
+   Value: 0.196 | Percentile: 3.5%
+   → Can't extend—low/away sliders
+3. CRITICAL: xwOBA_HittersCount
+   Value: 0.362 | Percentile: 3.5%
+   → Even in advantage, can't punish—don't nibble
+
+RELATIVE STRENGTHS:
+   ✅ ZoneContact%: 95%
+   ✅ Whiff%: 93%
+   ✅ Barrel%: 51%
+
+============================================================
+BATTER: Leody Taveras (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBA_Breaking
+   Value: 0.23 | Percentile: 8.8%
+   → Can't read spin—backfoot breaking balls
+2. MAJOR: xwOBA_LowAway
+   Value: 0.238 | Percentile: 10.5%
+   → Can't extend—low/away sliders
+3. MAJOR: xwOBA_RISP
+   Value: 0.272 | Percentile: 14.0%
+   → Presses with runners—expand zone early
+
+RELATIVE STRENGTHS:
+   ✅ CalledStrike%: 54%
+   ✅ Barrel%: 51%
+   ✅ ZoneContact%: 51%
+
+============================================================
+BATTER: Leody Taveras (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: HardHit%
+   Value: 20.0 | Percentile: 1.8%
+   → Can't generate power—challenge in zone
+2. MAJOR: xwOBA_RepeatPitch
+   Value: 0.262 | Percentile: 14.0%
+   → Can't adjust—repeat pitch sequences
+3. MAJOR: AvgEV
+   Value: 80.488 | Percentile: 15.8%
+   → Overall weak contact—attack aggressively
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_HighFB: 88%
+   ✅ xwOBA_Breaking: 88%
+   ✅ CalledStrike%: 86%
+
+============================================================
+BATTER: Ronald Acuna Jr. (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: FirstPitchSwing%
+   Value: 43.243 | Percentile: 8.8%
+   → Predictably aggressive—first pitch breaking ball
+2. MODERATE: xwOBA_HittersCount
+   Value: 0.48 | Percentile: 21.1%
+   → Even in advantage, can't punish—don't nibble
+3. MODERATE: ZoneContact%
+   Value: 80.06 | Percentile: 22.8%
+   → Misses hittable pitches—attack zone
+
+RELATIVE STRENGTHS:
+   ✅ CalledStrike%: 95%
+   ✅ xwOBA_2Strikes: 95%
+   ✅ xwOBA_Offspeed: 93%
+
+============================================================
+BATTER: Mickey Moniak (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: Chase%
+   Value: 39.447 | Percentile: 3.5%
+   → Expands zone—bury breaking balls with 2 strikes
+2. CRITICAL: xwOBA_HighFB
+   Value: 0.164 | Percentile: 7.0%
+   → Can't handle elevation—live up
+3. CRITICAL: xwOBA_SameSide
+   Value: 0.234 | Percentile: 7.1%
+   → Platoon vulnerability—same-side reliever
+
+RELATIVE STRENGTHS:
+   ✅ CalledStrike%: 58%
+   ✅ Barrel%: 51%
+   ✅ xwOBA_RISP: 51%
+
+============================================================
+BATTER: Dominic Fletcher (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: CalledStrike%
+   Value: 38.877 | Percentile: 0.0%
+   → Takes meat pitches—throw strikes early
+2. CRITICAL: xwOBA_HighFB
+   Value: 0.135 | Percentile: 1.8%
+   → Can't handle elevation—live up
+3. CRITICAL: xwOBA_Inside
+   Value: 0.244 | Percentile: 1.8%
+   → Jams easily—hard inside
+
+RELATIVE STRENGTHS:
+   ✅ SweetSpot%: 98%
+   ✅ xwOBA_Breaking: 70%
+   ✅ Whiff%: 68%
+
+============================================================
+BATTER: Tim Anderson (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBACON
+   Value: 0.235 | Percentile: 1.8%
+   → Weak contact even when squared—attack with velocity
+2. CRITICAL: xwOBA_LowAway
+   Value: 0.181 | Percentile: 1.8%
+   → Can't extend—low/away sliders
+3. CRITICAL: xwOBA_Offspeed
+   Value: 0.147 | Percentile: 1.8%
+   → Fooled by timing—changeups in fastball counts
+
+RELATIVE STRENGTHS:
+   ✅ SweetSpot%: 84%
+   ✅ Barrel%: 51%
+   ✅ CalledStrike%: 51%
+
+============================================================
+BATTER: Patrick Bailey (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: FirstPitchSwing%
+   Value: 42.45 | Percentile: 10.5%
+   → Predictably aggressive—first pitch breaking ball
+2. MODERATE: xwOBA_HighFB
+   Value: 0.234 | Percentile: 22.8%
+   → Can't handle elevation—live up
+3. MODERATE: xwOBA_Offspeed
+   Value: 0.253 | Percentile: 24.6%
+   → Fooled by timing—changeups in fastball counts
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_HittersCount: 96%
+   ✅ SweetSpot%: 93%
+   ✅ xwOBA_Breaking: 86%
+
+============================================================
+BATTER: Patrick Bailey (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBA_RISP
+   Value: 0.201 | Percentile: 1.8%
+   → Presses with runners—expand zone early
+2. MAJOR: xwOBACON
+   Value: 0.267 | Percentile: 10.5%
+   → Weak contact even when squared—attack with velocity
+3. MAJOR: xwOBA_2Strikes
+   Value: 0.184 | Percentile: 12.3%
+   → Defensive with two strikes—waste pitches
+
+RELATIVE STRENGTHS:
+   ✅ Chase%: 77%
+   ✅ HardHit%: 72%
+   ✅ AvgEV: 58%
+
+============================================================
+BATTER: Josh Naylor (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: Chase%
+   Value: 32.188 | Percentile: 17.5%
+   → Expands zone—bury breaking balls with 2 strikes
+2. MAJOR: FirstPitchSwing%
+   Value: 39.089 | Percentile: 17.5%
+   → Predictably aggressive—first pitch breaking ball
+3. MODERATE: SweetSpot%
+   Value: 34.936 | Percentile: 26.3%
+   → Can't lift the ball—elevate fastballs
+
+RELATIVE STRENGTHS:
+   ✅ CalledStrike%: 91%
+   ✅ HardHit%: 79%
+   ✅ xwOBA_LowAway: 79%
+
+============================================================
+BATTER: Byron Buxton (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: FirstPitchSwing%
+   Value: 45.103 | Percentile: 3.5%
+   → Predictably aggressive—first pitch breaking ball
+2. CRITICAL: xwOBA_Offspeed
+   Value: 0.198 | Percentile: 7.0%
+   → Fooled by timing—changeups in fastball counts
+3. CRITICAL: Whiff%
+   Value: 30.584 | Percentile: 8.8%
+   → Misses everything—throw chase pitches early
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_SameSide: 88%
+   ✅ CalledStrike%: 84%
+   ✅ xwOBA_HighFB: 84%
+
+============================================================
+BATTER: Christopher Morel (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: SweetSpot%
+   Value: 27.512 | Percentile: 1.8%
+   → Can't lift the ball—elevate fastballs
+2. CRITICAL: ZoneContact%
+   Value: 75.57 | Percentile: 7.0%
+   → Misses hittable pitches—attack zone
+3. CRITICAL: Whiff%
+   Value: 31.674 | Percentile: 7.0%
+   → Misses everything—throw chase pitches early
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_HighFB: 77%
+   ✅ xwOBA_SameSide: 74%
+   ✅ CalledStrike%: 70%
+
+============================================================
+BATTER: Maikel Garcia (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: CalledStrike%
+   Value: 36.31 | Percentile: 8.8%
+   → Takes meat pitches—throw strikes early
+2. MODERATE: xwOBA_HittersCount
+   Value: 0.498 | Percentile: 29.8%
+   → Even in advantage, can't punish—don't nibble
+
+RELATIVE STRENGTHS:
+   ✅ Whiff%: 91%
+   ✅ Chase%: 88%
+   ✅ ZoneContact%: 88%
+
+============================================================
+BATTER: Michael Busch (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: xwOBA_Breaking
+   Value: 0.239 | Percentile: 15.8%
+   → Can't read spin—backfoot breaking balls
+2. MODERATE: HardHit%
+   Value: 27.611 | Percentile: 26.3%
+   → Can't generate power—challenge in zone
+3. MODERATE: xwOBA_Offspeed
+   Value: 0.258 | Percentile: 28.1%
+   → Fooled by timing—changeups in fastball counts
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_LowAway: 93%
+   ✅ xwOBA_HighFB: 79%
+   ✅ SweetSpot%: 75%
+
+============================================================
+BATTER: Nolan Arenado (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: CalledStrike%
+   Value: 34.525 | Percentile: 12.3%
+   → Takes meat pitches—throw strikes early
+2. MAJOR: xwOBA_HittersCount
+   Value: 0.477 | Percentile: 17.5%
+   → Even in advantage, can't punish—don't nibble
+3. MODERATE: xwOBA_Inside
+   Value: 0.296 | Percentile: 24.6%
+   → Jams easily—hard inside
+
+RELATIVE STRENGTHS:
+   ✅ SweetSpot%: 89%
+   ✅ ZoneContact%: 89%
+   ✅ Whiff%: 88%
+
+============================================================
+BATTER: Nick Gordon (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: Chase%
+   Value: 42.447 | Percentile: 1.8%
+   → Expands zone—bury breaking balls with 2 strikes
+2. CRITICAL: xwOBA_SameSide
+   Value: 0.194 | Percentile: 2.4%
+   → Platoon vulnerability—same-side reliever
+3. CRITICAL: xwOBA_2Strikes
+   Value: 0.175 | Percentile: 5.3%
+   → Defensive with two strikes—waste pitches
+
+RELATIVE STRENGTHS:
+   ✅ CalledStrike%: 89%
+   ✅ SweetSpot%: 79%
+   ✅ xwOBA_Offspeed: 60%
+
+============================================================
+BATTER: Luis Campusano (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBA_Inside
+   Value: 0.279 | Percentile: 8.8%
+   → Jams easily—hard inside
+2. CRITICAL: xwOBA_Offspeed
+   Value: 0.199 | Percentile: 8.8%
+   → Fooled by timing—changeups in fastball counts
+3. MAJOR: xwOBA_RISP
+   Value: 0.275 | Percentile: 17.5%
+   → Presses with runners—expand zone early
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_SameSide: 64%
+   ✅ Whiff%: 61%
+   ✅ ZoneContact%: 53%
+
+============================================================
+BATTER: Danny Jansen (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBA_LowAway
+   Value: 0.219 | Percentile: 8.8%
+   → Can't extend—low/away sliders
+2. MAJOR: xwOBA_HittersCount
+   Value: 0.473 | Percentile: 15.8%
+   → Even in advantage, can't punish—don't nibble
+3. MAJOR: xwOBA_Offspeed
+   Value: 0.248 | Percentile: 19.3%
+   → Fooled by timing—changeups in fastball counts
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_HighFB: 95%
+   ✅ Chase%: 93%
+   ✅ FirstPitchSwing%: 93%
+
+============================================================
+BATTER: Javier Baez (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: Chase%
+   Value: 43.151 | Percentile: 0.0%
+   → Expands zone—bury breaking balls with 2 strikes
+2. CRITICAL: xwOBA_HighFB
+   Value: 0.157 | Percentile: 5.3%
+   → Can't handle elevation—live up
+3. MAJOR: xwOBACON
+   Value: 0.268 | Percentile: 14.0%
+   → Weak contact even when squared—attack with velocity
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_RISP: 68%
+   ✅ Barrel%: 51%
+   ✅ HardHit%: 46%
+
+============================================================
+BATTER: Alex Bregman (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: CalledStrike%
+   Value: 34.084 | Percentile: 14.0%
+   → Takes meat pitches—throw strikes early
+2. MODERATE: xwOBA_RISP
+   Value: 0.29 | Percentile: 22.8%
+   → Presses with runners—expand zone early
+
+RELATIVE STRENGTHS:
+   ✅ ZoneContact%: 96%
+   ✅ Whiff%: 95%
+   ✅ HardHit%: 81%
+
+============================================================
+BATTER: Charlie Blackmon (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: AvgEV
+   Value: 80.166 | Percentile: 10.5%
+   → Overall weak contact—attack aggressively
+2. MAJOR: HardHit%
+   Value: 24.444 | Percentile: 17.5%
+   → Can't generate power—challenge in zone
+
+RELATIVE STRENGTHS:
+   ✅ FirstPitchSwing%: 81%
+   ✅ Whiff%: 77%
+   ✅ xwOBA_HighFB: 75%
+
+============================================================
+BATTER: Brandon Marsh (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: xwOBA_SameSide
+   Value: 0.253 | Percentile: 19.0%
+   → Platoon vulnerability—same-side reliever
+2. MAJOR: xwOBA_Breaking
+   Value: 0.246 | Percentile: 19.3%
+   → Can't read spin—backfoot breaking balls
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_Offspeed: 86%
+   ✅ FirstPitchSwing%: 86%
+   ✅ SweetSpot%: 77%
+
+============================================================
+BATTER: Kevin Pillar (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBA_Offspeed
+   Value: 0.187 | Percentile: 3.5%
+   → Fooled by timing—changeups in fastball counts
+2. CRITICAL: xwOBA_LowAway
+   Value: 0.218 | Percentile: 7.0%
+   → Can't extend—low/away sliders
+3. CRITICAL: Chase%
+   Value: 37.781 | Percentile: 7.0%
+   → Expands zone—bury breaking balls with 2 strikes
+
+RELATIVE STRENGTHS:
+   ✅ ZoneContact%: 74%
+   ✅ xwOBA_Inside: 68%
+   ✅ xwOBA_RISP: 65%
+
+============================================================
+BATTER: Adley Rutschman (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: CalledStrike%
+   Value: 36.381 | Percentile: 7.0%
+   → Takes meat pitches—throw strikes early
+2. MODERATE: xwOBA_Breaking
+   Value: 0.261 | Percentile: 26.3%
+   → Can't read spin—backfoot breaking balls
+
+RELATIVE STRENGTHS:
+   ✅ FirstPitchSwing%: 96%
+   ✅ Whiff%: 86%
+   ✅ xwOBA_LowAway: 68%
+
+============================================================
+BATTER: Adley Rutschman (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: xwOBA_Breaking
+   Value: 0.19 | Percentile: 1.8%
+   → Can't read spin—backfoot breaking balls
+2. CRITICAL: CalledStrike%
+   Value: 37.471 | Percentile: 3.5%
+   → Takes meat pitches—throw strikes early
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_HighFB: 100%
+   ✅ FirstPitchSwing%: 98%
+   ✅ SweetSpot%: 95%
+
+============================================================
+BATTER: Kyle Schwarber (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: SweetSpot%
+   Value: 29.36 | Percentile: 3.5%
+   → Can't lift the ball—elevate fastballs
+2. MAJOR: Whiff%
+   Value: 29.587 | Percentile: 12.3%
+   → Misses everything—throw chase pitches early
+3. MAJOR: ZoneContact%
+   Value: 79.227 | Percentile: 14.0%
+   → Misses hittable pitches—attack zone
+
+RELATIVE STRENGTHS:
+   ✅ AvgEV: 96%
+   ✅ xwOBA_RepeatPitch: 95%
+   ✅ Chase%: 91%
+
+============================================================
+BATTER: Francisco Lindor (R)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. MAJOR: xwOBA_HighFB
+   Value: 0.216 | Percentile: 17.5%
+   → Can't handle elevation—live up
+2. MAJOR: CalledStrike%
+   Value: 33.746 | Percentile: 19.3%
+   → Takes meat pitches—throw strikes early
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_SameSide: 100%
+   ✅ xwOBA_Inside: 96%
+   ✅ xwOBACON: 95%
+
+============================================================
+BATTER: Oneil Cruz (L)
+============================================================
+
+PRIMARY WEAKNESSES:
+1. CRITICAL: Whiff%
+   Value: 32.668 | Percentile: 5.3%
+   → Misses everything—throw chase pitches early
+2. CRITICAL: ZoneContact%
+   Value: 77.539 | Percentile: 8.8%
+   → Misses hittable pitches—attack zone
+3. MAJOR: SweetSpot%
+   Value: 33.108 | Percentile: 17.5%
+   → Can't lift the ball—elevate fastballs
+
+RELATIVE STRENGTHS:
+   ✅ xwOBA_HittersCount: 98%
+   ✅ AvgEV: 95%
+   ✅ xwOBA_LowAway: 84%
+
